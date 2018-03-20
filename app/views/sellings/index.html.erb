@@ -1,0 +1,22 @@
+<table style="width:100%">
+  <tr>
+    <th>Comprador</th>
+    <th>Descrição</th> 
+    <th>Preço unitário</th>
+    <th>Quantidade</th>
+    <th>Endereço</th>
+    <th>Fornecedor</th>
+  </tr>
+  <% @sellings.each do |sale| %>
+    <tr>
+      <td><%= sale.buyer %></td>
+      <td><%= sale.description %></td>
+      <td><%= sale.unit_price %></td>
+      <td><%= sale.amount %></td>
+      <td><%= sale.address %></td>
+      <td><%= sale.provider %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Importar arquivo", new_selling_path %>
