@@ -7,8 +7,6 @@ class CreateSellings < ActiveRecord::Migration[5.1]
       t.decimal :amount
       t.string :address
       t.string :provider
-
-      t.timestamps
     end
   end
 end

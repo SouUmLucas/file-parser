@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20180320135128) do
     t.decimal "amount"
     t.string "address"
     t.string "provider"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
