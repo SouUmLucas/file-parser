@@ -1,3 +1,0 @@
-class Selling < ApplicationRecord
-
-end

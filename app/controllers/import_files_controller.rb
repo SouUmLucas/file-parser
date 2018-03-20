@@ -1,11 +1,11 @@
-class SellingsController < ApplicationController
+class ImportFilesController < ApplicationController
 
   def index
-    @sellings = Selling.all
+    @imported_files = ImportFile.all
   end
 
   def new
-    @selling = Selling.new
+    @import_file = ImportFile.new
   end
 
   def create

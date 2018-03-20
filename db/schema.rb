@@ -10,15 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320135128) do
-
-  create_table "sellings", force: :cascade do |t|
-    t.string "buyer"
-    t.string "description"
-    t.decimal "unit_price"
-    t.decimal "amount"
-    t.string "address"
-    t.string "provider"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

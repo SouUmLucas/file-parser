@@ -1,6 +1,7 @@
-class CreateSellings < ActiveRecord::Migration[5.1]
+class CreateSales < ActiveRecord::Migration[5.1]
   def change
-    create_table :sellings do |t|
+    create_table :sales do |t|
+      t.references :import_files, foreign_key: :true
       t.string :buyer
       t.string :description
       t.decimal :unit_price
