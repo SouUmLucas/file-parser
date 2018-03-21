@@ -1,24 +1,28 @@
 <h3>Receita bruta: <%= @imported_file.gross_revenue %></h3>
 
-<table style="width:100%">
-  <tr>
-    <th>Comprador</th>
-    <th>Descrição</th> 
-    <th>Preço unitário</th>
-    <th>Quantidade</th>
-    <th>Endereço</th>
-    <th>Fornecedor</th>
-  </tr>
-  <% @imported_file.sales.each do |sale| %>
+<div class="scroll-table">
+  <table class="table table-sm">
     <tr>
-      <td><%= sale.buyer %></td>
-      <td><%= sale.description %></td>
-      <td><%= sale.unit_price %></td>
-      <td><%= sale.amount %></td>
-      <td><%= sale.address %></td>
-      <td><%= sale.provider %></td>
+      <th>Comprador</th>
+      <th>Descrição</th> 
+      <th>Preço unitário</th>
+      <th>Quantidade</th>
+      <th>Endereço</th>
+      <th>Fornecedor</th>
     </tr>
-  <% end %>
-</table>
+    <% @imported_file.sales.each do |sale| %>
+      <tr>
+        <td><%= sale.buyer %></td>
+        <td><%= sale.description %></td>
+        <td><%= sale.unit_price %></td>
+        <td><%= sale.amount %></td>
+        <td><%= sale.address %></td>
+        <td><%= sale.provider %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+
 
 <%= link_to "Voltar", import_files_path %>

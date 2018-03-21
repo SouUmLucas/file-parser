@@ -1,14 +1,25 @@
-<table style="width:100%">
-  <tr>
-    <th>Nome do arquivo</th>
-    <th>Data de importação</th>
-  </tr>
-  <% @imported_files.each do |file| %>
-    <tr>
-      <td><%= file.file_name %></td>
-      <td><%= file.created_at %></td>
-    </tr>
-  <% end %>
-</table>
+<div class=scroll-table>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Nome do arquivo</th>
+        <th>Data de importação</th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @imported_files.each do |file| %>
+        <tr>
+          <td><%= file.file_name %></td>
+          <td><%= file.created_at %></td>
+          <td><%= link_to "Visualizar", file %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
 
 <%= link_to "Importar arquivo", new_import_file_path %>
