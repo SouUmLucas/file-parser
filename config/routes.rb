@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sellings#index'
+  root 'import_files#index'
 
-  resources :sellings
+  resources :import_files
 end

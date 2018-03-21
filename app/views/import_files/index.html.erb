@@ -1,0 +1,14 @@
+<table style="width:100%">
+  <tr>
+    <th>Nome do arquivo</th>
+    <th>Data de importação</th>
+  </tr>
+  <% @imported_files.each do |file| %>
+    <tr>
+      <td><%= file.file_name %></td>
+      <td><%= file.created_at %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Importar arquivo", new_import_file_path %>

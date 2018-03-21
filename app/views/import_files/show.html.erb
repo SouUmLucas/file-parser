@@ -1,3 +1,5 @@
+<h3>Receita bruta: <%= @imported_file.gross_revenue %></h3>
+
 <table style="width:100%">
   <tr>
     <th>Comprador</th>
@@ -7,7 +9,7 @@
     <th>Endereço</th>
     <th>Fornecedor</th>
   </tr>
-  <% @sellings.each do |sale| %>
+  <% @imported_file.sales.each do |sale| %>
     <tr>
       <td><%= sale.buyer %></td>
       <td><%= sale.description %></td>
@@ -19,4 +21,4 @@
   <% end %>
 </table>
 
-<%= link_to "Importar arquivo", new_selling_path %>
+<%= link_to "Voltar", import_files_path %>

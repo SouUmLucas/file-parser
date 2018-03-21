@@ -10,6 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180320173834) do
+
+  create_table "import_files", force: :cascade do |t|
+    t.string "file_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer "import_file_id"
+    t.string "buyer"
+    t.string "description"
+    t.decimal "unit_price"
+    t.decimal "amount"
+    t.string "address"
+    t.string "provider"
+    t.index ["import_file_id"], name: "index_sales_on_import_file_id"
+  end
 
 end
