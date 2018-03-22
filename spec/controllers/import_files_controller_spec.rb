@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ImportFilesController, type: :controller do
-
   describe '#create' do
     subject do
       post(
@@ -17,7 +16,4 @@ RSpec.describe ImportFilesController, type: :controller do
       expect(subject).to redirect_to(import_file_path(1))
     end
   end
-  
-  
-
 end
