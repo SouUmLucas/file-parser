@@ -12,7 +12,7 @@ class ImportFilesController < ApplicationController
   def create
     @import_file = ImportFile.new
     @import_file.file = sellings_params[:file]
-    @import_file.file_name = sellings_params[:file]
+    @import_file.file_name = sellings_params[:file].original_filename
     
     respond_to do |format|
       if @import_file.save
