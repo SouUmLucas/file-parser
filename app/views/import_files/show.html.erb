@@ -1,4 +1,4 @@
-<h3>Receita bruta: <%= @imported_file.gross_revenue %></h3>
+<h3>Receita bruta: <%= number_to_currency @imported_file.gross_revenue %></h3>
 
 <div class="scroll-table">
   <table class="table table-sm">
@@ -14,7 +14,7 @@
       <tr>
         <td><%= sale.buyer %></td>
         <td><%= sale.description %></td>
-        <td><%= sale.unit_price %></td>
+        <td><%= number_to_currency sale.unit_price %></td>
         <td><%= sale.amount %></td>
         <td><%= sale.address %></td>
         <td><%= sale.provider %></td>

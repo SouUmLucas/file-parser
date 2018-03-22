@@ -1,5 +1,13 @@
 <%= form_for @import_file do |form| %>
-  <%= form.file_field :file %><br>
-
-  <%= form.submit %>
+  <div style="margin: 1%;">
+    <div class="custom-file">
+      <%= form.file_field :file, class: "custom-file-input", id: "file" %><br>
+      <label class="custom-file-label" for="file">Selecione o arquivo</label>
+    </div>
+  </div>
+  
+  <div align="center">
+    <%= form.submit "Importar", class: "btn btn-success btn-lg" %>
+  </div>
+  
 <% end %>
