@@ -3,7 +3,6 @@ class ImportFile < ApplicationRecord
   has_many :sales
 
   def save
-    self.file_name = file.original_filename
     super
     save_sales
   end

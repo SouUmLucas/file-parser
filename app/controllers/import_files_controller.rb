@@ -12,7 +12,8 @@ class ImportFilesController < ApplicationController
   def create
     @import_file = ImportFile.new
     @import_file.file = sellings_params[:file]
-
+    @import_file.file_name = sellings_params[:file]
+    
     respond_to do |format|
       if @import_file.save
         format.html { redirect_to import_file_path @import_file }
