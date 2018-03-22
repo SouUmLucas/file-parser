@@ -7,7 +7,7 @@ RSpec.describe ImportFilesController, type: :controller do
       post(
         :create, params: {
           import_file:{ 
-            file: Rack::Test::UploadedFile.new("#{Rails.root}/spec/support/dados2.txt", 'text/txt')
+            file: Rack::Test::UploadedFile.new("#{Rails.root}/spec/support/dados_test.txt", 'text/txt')
           }
         }
       )
