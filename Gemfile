@@ -22,6 +22,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
+  gem 'shoulda', '~> 3.5'
 end
 
 group :development do
